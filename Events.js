@@ -377,37 +377,28 @@ function Events() {
             <AccordionItem className="border border-light accord">
               <AccordionHeader targetId="2">Categories</AccordionHeader>
               <AccordionBody accordionId="2">
-                <button
-                  className={
-                    newEvecategory[0]
-                      ? " p-2 ms-3 mb-3 border border-light-subtle evebtns langbtns"
-                      : " p-2 ms-3 mb-3 border border-light-subtle evebtns"
-                  }
-                  onClick={() => {
-                    multiplelangStates(0);
-                  }}
-                >
+                <button className="p-2 ms-3 mb-3 border border-light-subtle evebtns">
                   Online Streaming Events
                 </button>
-                <button className="bg-white p-2 ms-3 mb-3 border border-light-subtle evebtns">
+                <button className="p-2 ms-3 mb-3 border border-light-subtle evebtns">
                   Workshops
                 </button>
-                <button className="bg-white p-2 ms-3 mb-3 border border-light-subtle evebtns">
+                <button className="p-2 ms-3 mb-3 border border-light-subtle evebtns">
                   Comedy Shows
                 </button>
-                <button className="bg-white p-2 ms-3 mb-3 border border-light-subtle evebtns">
+                <button className="p-2 ms-3 mb-3 border border-light-subtle evebtns">
                   Music Shows
                 </button>
-                <button className="bg-white p-2 ms-3 mb-3 border border-light-subtle evebtns">
+                <button className="p-2 ms-3 mb-3 border border-light-subtle evebtns">
                   Kids
                 </button>
-                <button className="bg-white p-2 ms-3 mb-3 border border-light-subtle evebtns">
+                <button className="p-2 ms-3 mb-3 border border-light-subtle evebtns">
                   Meetups
                 </button>
-                <button className="bg-white p-2 ms-3 mb-3 border border-light-subtle evebtns">
+                <button className="p-2 ms-3 mb-3 border border-light-subtle evebtns">
                   Spirituality
                 </button>
-                <button className="bg-white p-2 ms-3 mb-3 border border-light-subtle evebtns">
+                <button className="p-2 ms-3 mb-3 border border-light-subtle evebtns">
                   Exhibitions
                 </button>
               </AccordionBody>
