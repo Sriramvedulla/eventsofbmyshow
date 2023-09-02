@@ -9,6 +9,29 @@ import { useState } from "react";
 
 const array1 = [
   {
+    img: "https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-TW9uLCA0IFNlcCBvbndhcmRz,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00317292-smfhyhlzjw-portrait.jpg",
+    name: "Mastering Basics Of Photography",
+    languages: "Telugu",
+    catagory: "Photography | English, Hindi, Telugu | 12yrs + | 3hrs",
+    price: 4000,
+  },
+  {
+    img: "https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-U2F0LCAzMCBTZXA%3D,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00360743-xxczztempp-portrait.jpg",
+    name: "Ani X Con",
+    languages: "Tamil",
+    type: "exhibitions",
+    catagory: "Comics | English, Tamil, Hindi | 16yrs + | 22hrs",
+    price: 1000,
+  },
+  {
+    img: "https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-U3VuLCAzIFNlcA%3D%3D,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00367329-dbpmubnvlk-portrait.jpg",
+    name: "Dance Dance",
+    languages: "Tamil",
+    type: "performances",
+    catagory: "Dance | Tamil | 3yrs + | 3hrs 30mins",
+    price: 300,
+  },
+  {
     img: "https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-U2F0LCAyIFNlcA%3D%3D,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00364885-nekjbbgudc-portrait.jpg",
     name: "Thinking Out Loud By Manoj Prabakar",
     languages: "English",
@@ -185,29 +208,18 @@ const array1 = [
     price: 299,
     type: "onlinestreaming",
   },
-  {
-    img: "https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-TW9uLCA0IFNlcCBvbndhcmRz,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00317292-smfhyhlzjw-portrait.jpg",
-    name: "Mastering Basics Of Photography",
-    languages: "Telugu",
-    catagory: "Photography | English, Hindi, Telugu | 12yrs + | 3hrs",
-    price: 4000,
-  },
-  {
-    img: "https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-U2F0LCAzMCBTZXA%3D,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00360743-xxczztempp-portrait.jpg",
-    name: "Ani X Con",
-    languages: "Tamil",
-    type: "exhibitions",
-    catagory: "Comics | English, Tamil, Hindi | 16yrs + | 22hrs",
-    price: 1000,
-  },
-  {
-    img: "https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-U3VuLCAzIFNlcA%3D%3D,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00367329-dbpmubnvlk-portrait.jpg",
-    name: "Dance Dance",
-    languages: "Tamil",
-    type: "performances",
-    catagory: "Dance | Tamil | 3yrs + | 3hrs 30mins",
-    price: 300,
-  },
+];
+
+const langArray = [
+  "English",
+  "Hindi",
+  "Tamil",
+  "Telugu",
+  "Malayalam",
+  "Kannada",
+  "Bengali",
+  "Gujarati",
+  "multilanguages",
 ];
 
 function Events() {
@@ -230,15 +242,42 @@ function Events() {
       if (index === i) {
         return !ele;
       }
-      return false;
+      return ele;
     });
     console.log(newlanbtnActive);
     setEveLanguage(newlanbtnActive);
+
+    let mapgroupArray = newlanbtnActive.map((langTF, i) => {
+      let filteredArray = [];
+      if (langTF) {
+        filteredArray = array1.filter((ele) => ele.languages === langArray[i]);
+      }
+      return filteredArray;
+    });
+
+    //console.log([...mapgroupArray[0],...mapgroupArray[1]])
+    let newMapGroupArray = [
+      ...mapgroupArray[0],
+      ...mapgroupArray[1],
+      ...mapgroupArray[2],
+      ...mapgroupArray[3],
+      ...mapgroupArray[4],
+      ...mapgroupArray[5],
+      ...mapgroupArray[6],
+      ...mapgroupArray[7],
+      ...mapgroupArray[8],
+    ];
+
+    if (newMapGroupArray.length === 0) {
+      setnewEveLanguage(array1);
+    } else {
+      setnewEveLanguage(newMapGroupArray);
+    }
   }
 
-  function filterfunction(x) {
-    const lang = array1.filter((ele) => ele.languages == x);
-    setnewEveLanguage(lang);
+  function filterfunction() {
+    // const lang = array1.filter((ele) => ele.languages === x);
+    // setnewEveLanguage(lang);
   }
 
   return (
@@ -464,9 +503,9 @@ function Events() {
           </UncontrolledAccordion>
         </div>
         <div className="div4th-right">
-          {newEvelanguage.map((index) => {
+          {newEvelanguage.map((index, y) => {
             return (
-              <div className="right-flex">
+              <div className="right-flex" key={y}>
                 <img
                   style={{ height: "300px", borderRadius: "10px" }}
                   src={index.img}
