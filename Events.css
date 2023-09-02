@@ -53,6 +53,9 @@
 .div4-left {
   width: 35%;
 }
+#daterange {
+  margin-right: 20px;
+}
 .accord {
   margin-bottom: 15px;
 }

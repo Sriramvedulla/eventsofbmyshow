@@ -254,10 +254,28 @@ function Events() {
       <div className="div3rd"></div>
       <div className="div4section">
         <div className="div4-left">
-          <UncontrolledAccordion>
+          <UncontrolledAccordion defaultOpen={["1"]} stayOpen>
             <AccordionItem className="border border-light accord">
-              <AccordionHeader targetId="1">Languages</AccordionHeader>
+              <AccordionHeader targetId="1">Date</AccordionHeader>
               <AccordionBody accordionId="1">
+                <button className="p-2 ms-3 mb-3 border border-light-subtle evebtns">
+                  Today
+                </button>
+                <button className="p-2 ms-3 mb-3 border border-light-subtle evebtns">
+                  Tomorrow
+                </button>
+                <button className="p-2 ms-3 mb-3 border border-light-subtle evebtns">
+                  This Weekend
+                </button>
+                <div className="inputbox">
+                  <input type="checkbox" id="daterange" />
+                  <label htmlFor="daterange">Date Range</label>
+                </div>
+              </AccordionBody>
+            </AccordionItem>
+            <AccordionItem className="border border-light accord">
+              <AccordionHeader targetId="2">Languages</AccordionHeader>
+              <AccordionBody accordionId="2">
                 <button
                   className={
                     Evelanguage[0]
@@ -318,6 +336,7 @@ function Events() {
                   }
                   onClick={() => {
                     multiplelangStates(4);
+                    filterfunction("Malayalam");
                   }}
                 >
                   Malayalam
@@ -330,6 +349,7 @@ function Events() {
                   }
                   onClick={() => {
                     multiplelangStates(5);
+                    filterfunction("Kannada");
                   }}
                 >
                   Kannada
@@ -342,6 +362,7 @@ function Events() {
                   }
                   onClick={() => {
                     multiplelangStates(6);
+                    filterfunction("Bengali");
                   }}
                 >
                   Bengali
@@ -375,8 +396,8 @@ function Events() {
               </AccordionBody>
             </AccordionItem>
             <AccordionItem className="border border-light accord">
-              <AccordionHeader targetId="2">Categories</AccordionHeader>
-              <AccordionBody accordionId="2">
+              <AccordionHeader targetId="3">Categories</AccordionHeader>
+              <AccordionBody accordionId="3">
                 <button className="p-2 ms-3 mb-3 border border-light-subtle evebtns">
                   Online Streaming Events
                 </button>
@@ -404,8 +425,8 @@ function Events() {
               </AccordionBody>
             </AccordionItem>
             <AccordionItem className="border border-light accord">
-              <AccordionHeader targetId="3">More Filters</AccordionHeader>
-              <AccordionBody accordionId="3">
+              <AccordionHeader targetId="4">More Filters</AccordionHeader>
+              <AccordionBody accordionId="4">
                 <button className="bg-white p-2 ms-3 mb-3 border border-light-subtle evebtns">
                   Online Streaming
                 </button>
@@ -424,8 +445,8 @@ function Events() {
               </AccordionBody>
             </AccordionItem>
             <AccordionItem className="border border-light accord">
-              <AccordionHeader targetId="4">Price</AccordionHeader>
-              <AccordionBody accordionId="4">
+              <AccordionHeader targetId="5">Price</AccordionHeader>
+              <AccordionBody accordionId="5">
                 <button className="bg-white p-2 ms-3 mb-3 border border-light-subtle evebtns">
                   Free
                 </button>
