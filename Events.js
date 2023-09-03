@@ -219,7 +219,7 @@ const langArray = [
   "Kannada",
   "Bengali",
   "Gujarati",
-  "multilanguages",
+  "multilanguage",
 ];
 
 function Events() {

@@ -1,0 +1,54 @@
+.abt {
+  border-bottom: 1px solid #e5e5e5;
+  margin-top: 5%;
+  padding-bottom: 20px;
+}
+.castcrew {
+  margin-left: 60px;
+  width: 65%;
+  overflow-x: scroll;
+}
+.castsection {
+  margin-top: 30px;
+}
+.cast {
+  width: 70%;
+  margin-top: 10px;
+  display: flex;
+  position: relative;
+  gap: 30px;
+  border-bottom: 1px solid #e5e5e5;
+}
+.castdata img {
+  border-radius: 50%;
+  max-width: 120px;
+}
+.castdata {
+  width: 25%;
+  text-align: center;
+}
+.actorname {
+  font-size: 16px;
+  font-weight: 500;
+}
+.btnback,
+.btnforward {
+  border-radius: 50%;
+  position: absolute;
+  border: none;
+  height: 40px;
+  width: 40px;
+  background-color: lightgray;
+  opacity: 0.4;
+}
+.btnback {
+  top: 28%;
+  left: 0;
+}
+.btnforward {
+  top: 28%;
+  right: 0;
+}
+.filmcrew {
+  margin-left: 60px;
+}
