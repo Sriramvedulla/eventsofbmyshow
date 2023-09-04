@@ -57,6 +57,11 @@
 .moviedetails p {
   font-size: 18px;
 }
+.likebtn {
+  color: rgb(33, 202, 33);
+  font-size: 32px;
+  vertical-align: text-bottom;
+}
 .majorinter {
   display: flex;
   align-items: center;

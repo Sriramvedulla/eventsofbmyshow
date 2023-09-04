@@ -1,5 +1,6 @@
 import React from "react";
 import { BiShareAlt } from "react-icons/bi";
+import { AiFillLike } from "react-icons/ai";
 import "./Jawaan.css";
 import Jawancast from "./Jawancast";
 
@@ -18,6 +19,7 @@ function Jawaan() {
           <div className="moviedetails">
             <h1>Jawan</h1>
             <p>
+              <AiFillLike className="likebtn"></AiFillLike>
               <strong>568.9K</strong> are interested
             </p>
             <div className="majorinter">
@@ -64,7 +66,7 @@ function Jawaan() {
           </div>
           <div className="share">
             <button className="linkshare">
-              <BiShareAlt></BiShareAlt>Share
+              <BiShareAlt></BiShareAlt>&nbsp; Share
             </button>
           </div>
         </div>
